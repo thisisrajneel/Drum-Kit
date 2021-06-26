@@ -1,6 +1,6 @@
 for (let i = 0; i < document.getElementsByClassName("drum").length; i++) {
   document.getElementsByClassName("drum")[i].addEventListener("click", () => {
-    this.setAttribute('color', '#fff');
+    this.style.color = "white";
   });
 }
 
