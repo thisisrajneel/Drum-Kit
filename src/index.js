@@ -1,5 +1,5 @@
-for (let i = 0; i < document.getElementsByClassName("drum").length; i++) {
-  document.getElementsByClassName("drum")[i].addEventListener("click", () => {
+for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
+  document.gquerySelectorAll(".drum")[i].addEventListener("click", () => {
     switch (this.innerHTML) {
       case "w":
         let sound = new Audio("sounds/tom-1.mp3");
