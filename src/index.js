@@ -1,11 +1,17 @@
+// Click sound + animation
+
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     makeSound(this.innerHTML);
+    animation(this.innerHTML);
   });
 }
 
+// Keypress sound + animation
+
 document.addEventListener('keypress',function(event) {
   makeSound(event.key);
+  animation(event.key);
 });
 
 const makeSound = (temp) => {
@@ -45,4 +51,11 @@ const makeSound = (temp) => {
       sound.play();
       break;
   }
+}
+
+const animation = (currentkey) => {
+  document.querySelector('.' + currentkey).classList.add("pressed");
+  setTimeout(() => {
+    document.querySelector('.' + currentkey).classList.remove("pressed");
+  }, 100);
 }
